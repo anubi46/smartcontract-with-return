@@ -1,7 +1,7 @@
 pragma solidity ^0.4.13;
 
 /**
- * @title SDC ERC20 token SideraDC
+ * @title ERC20 token by Anubi
  *
  * @dev Based on OpenZeppelin framework.
  *
@@ -188,10 +188,10 @@ contract ERC20 is ERC20Basic {
   event Approval(address indexed owner, address indexed spender, uint256 value);
 }
 
-contract SDC is BasicToken, BurnableToken, ERC20 {
+contract RT is BasicToken, BurnableToken, ERC20 {
 
-  string public constant name = "SDC: SideraDC ERC20 Token";
-  string public constant symbol = "SDC";
+  string public constant name = "RT: ERC20 Token";
+  string public constant symbol = "RT";
   uint8 public constant decimals = 18;
   string public constant version = "1.0";
 
@@ -208,8 +208,8 @@ contract SDC is BasicToken, BurnableToken, ERC20 {
    * * gives all of existing tokens to the message sender;
    * * initializes the burners (also adding the message sender);
    */
-  function SDC() public {
-      totalSupply = INITIAL_SUPPLY_EMTV * (10 ** uint256(decimals));
+  function RT() public {
+      totalSupply = INITIAL_SUPPLY_RT * (10 ** uint256(decimals));
       balances[msg.sender] = totalSupply;
 
       isBurner[msg.sender] = true;
